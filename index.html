@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mouse Over Effect</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="content">
+        <div class="contentWrapper">
+          <h1>Mouseover Effect</h1>
+          <p>
+            This is pretty cool. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Veniam assumenda modi maiores culpa similique at?
+            Quod ipsa, fugiat praesentium
+          </p>
+          <button>Get Started</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let container = document.querySelector(".container");
+      let layer = document.querySelectorAll(".layer");
+
+      container.onmousemove = function (e) {
+        console.log(e.pageX, e.pageY);
+        let X = e.pageX;
+        let Y = e.pageY;
+
+        layer[0].style.transform =
+          "translate(" + X / 100 + "px, " + Y / 100 + "px)";
+        layer[1].style.transform =
+          "translate(" + (X / 100) * 2 + "px, " + (Y / 100) * 2 + "px)";
+        layer[2].style.transform =
+          "translate(" + (X / 100) * 4 + "px, " + (Y / 100) * 4 + "px)";
+        layer[3].style.transform =
+          "translate(" + (X / 100) * 6 + "px, " + (Y / 100) * 6 + "px)";
+        layer[4].style.transform =
+          "translate(" + (X / 100) * 8 + "px, " + (Y / 100) * 8 + "px)";
+        layer[5].style.transform =
+          "translate(" + (X / 100) * 10 + "px, " + (Y / 100) * 10 + "px)";
+        layer[6].style.transform =
+          "translate(" + (X / 100) * 12 + "px, " + (Y / 100) * 12 + "px)";
+      };
+    </script>
+  </body>
+</html>
